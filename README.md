@@ -5,8 +5,8 @@ sudo vi credentials.json
 credentials.json
 ```
 {
-  "username":"rtandon@loggly.com",
-  "password":"raghav@9713"
+  "username":"xxxxx@xxxx.com",
+  "password":"xxxxxxxxxx"
 }
 ```
 Execute sending mail
