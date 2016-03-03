@@ -47,7 +47,7 @@ def send_rendered_mail(sub, to):
     s.starttls()
     s.ehlo()
     creds=json.loads(open("credentials.json").read())
-    
+
     s.login(creds["username"],
             creds["password"])
     s.sendmail(msg['From'], [msg['To'], msg['Cc']], msg.as_string())
