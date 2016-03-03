@@ -1,11 +1,18 @@
-__author__ = 'rt'
-
+from __future__ import print_function
 import email.message
 import smtplib
 from smtplib import *
 from jinja2 import *
-import datetime
-import json
+
+from oauth2client import tools
+from oauth2client.client import *
+
+try:
+    import argparse
+
+    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+except ImportError:
+    flags = None
 
 
 def render_mail(data="stats.json"):
@@ -41,9 +48,9 @@ def send_rendered_mail(sub, to):
     s.ehlo()
     s.login("rtandon@loggly.com",
             "raghav@9713")
-    s.sendmail(msg['From'], [msg['To'],msg['Cc']], msg.as_string())
+    s.sendmail(msg['From'], [msg['To'], msg['Cc']], msg.as_string())
 
 
-sender="rsingh@loggly.com"
-subject=render_mail()
-send_rendered_mail(sub=subject,to=sender)
+sender_to = "rsingh@loggly.com"
+subject = render_mail()
+send_rendered_mail(sub=subject, to=sender_to)
