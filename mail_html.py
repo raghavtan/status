@@ -46,9 +46,11 @@ def send_rendered_mail(sub, to):
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("rtandon@loggly.com",
-            "raghav@9713")
-    s.sendmail(msg['From'], [msg['To'], msg['Cc']], msg.as_string())
+    creds=json.loads(open("credentials.json").read())
+    print (creds)
+    s.login(creds["username"],
+            creds["password"])
+    #s.sendmail(msg['From'], [msg['To'], msg['Cc']], msg.as_string())
 
 
 sender_to = "rsingh@loggly.com"
