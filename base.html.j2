@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<div style="max-width:900px;margin:0 auto;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%%" style="font-family:Arial;font-size:14px;">
+        <tr>
+            <td></td>
+            <td width="900" bgcolor="#FFFFFF"  style="border:1px solid #000000;">
+                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                    <tr bgcolor="#808080">
+                        <td border="0" width="100%%" bgcolor="#808080" height="60"  style="color:#FFFFFF;text-align:right;font-size:15px;"><div style="font-size: 25px; padding: 10px;">{{ title }}</div></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" border="0" bgcolor="#4682B4" height="5" style="font-size:1px;line-height:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </table>
+                <table width="100%%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;font-size:14px;">
+                    <div style="padding:5px">
+                        <div style="font-size:20px; padding:5px">
+                            Greetings,
+                        </div>
+                        <div style="font-size:15px; padding:5px; padding-left:60px">
+                            Today we worked on the following
+                        </div>
+                    </div>
+
+                </table>
+
+                <table bgcolor="#eeefef" cellpadding="0" cellspacing="0" border="0" width="100%%" style="font-size:14px;">
+                    <tr>
+                        <td height="25" colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="20"></td>
+                        <td>
+                            <div>
+                                <div style="float:left; width:58% ;padding:5px" >
+                                <div style="float:left;padding:5px">
+                                {% for worker in data.progress %}
+                                <p><b>{{ worker.user.name | upper }}</b></p>
+                                {% for task_list in worker.user.tasks %}
+                                {{ task_list.task }}<br>Status : {{ task_list.Status }}<br><br>
+                                {% endfor %}
+                                <br>
+                                {% endfor %}
+                                </div>
+                                <div style="float:left;padding:5px">
+                                {% for issue in data.issue %}
+                                <p>{{ issue.id }} {{ issue.description }} <br> Status : {{ issue.status }} </p>
+
+                                {% endfor %}
+                                </div>
+                                </div>
+                                <div style="float:right; width:38%;padding:5px" >
+
+                                PLACE_HOLDER FOR SPREADSHEET
+
+                                </div>
+                            </div>
+                        </td>
+                        <td width="20"></td>
+                    </tr>
+                    <tr>
+                        <td height="25" colspan="3">&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+
+                    <tr>
+                        <td border="0" bgcolor="#4682B4" height="5" style="font-size:1px;line-height:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" bgcolor="#808080" width="100%%">
+                                <tr>
+                                    <td colspan="3" height="25">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="20"></td>
+                                    <td>
+                                        <table width="100%%" cellpadding="0" cellspacing="0" border="0">
+
+                                            <tr>
+                                                <td height="15">&nbsp;</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="color:#eeefef;font-weight:bold;font-size:14px;">INFRASTRUCTURE-QA</td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                    <td width="20"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="60">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

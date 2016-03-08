@@ -1,0 +1,86 @@
+{
+  "progress": [
+    {
+      "user": {
+        "name": "raghav",
+        "tasks": [
+          {
+            "task": "Manual testing of Percentage diff alert",
+            "Status": "Done"
+          },
+          {
+            "task": "Code for Percentage diff alert",
+            "Status": "Done"
+          },
+          {
+            "task": "Code pushed on git and running successfully in Chipper Smoke test",
+            "Status": "Done"
+          }
+        ]
+      }
+    },
+    {
+      "user": {
+        "name": "alok",
+        "tasks": [
+          {
+            "task": "Manual testing for Index log from Past",
+            "Status": "In progress"
+          },
+          {
+            "task": "Code for Index log from Past",
+            "Status": "In progress"
+          },
+          {
+            "task": "Create story for Index log from Past",
+            "Status": "Done"
+          }
+        ]
+      }
+    },
+    {
+      "user": {
+        "name": "Ranjeet",
+        "tasks": [
+          {
+            "task": "Code for Jigsaw Event API in smoke test",
+            "Status": "Done"
+          },
+          {
+            "task": "Code for jigsaw Histogram API with \"interval\" in functional testing",
+            "Status": "Done"
+          },
+          {
+            "task": "Update test design document",
+            "Status": "Done"
+          },
+          {
+            "task": "Fix percentage diff anomaly failed",
+            "Status": "Done"
+          },
+          {
+            "task": "Start working on Histogram and Terms API with sorting order",
+            "Status": "In progress"
+          }
+        ]
+      }
+    }
+  ],
+  "issue": [
+    {
+      "id": "LOGGLY-10677",
+      "description": "Field Name getting created very late for handsaw",
+      "status": "Commented/closed"
+    },
+    {
+      "id": "LOGGLY-10749",
+      "description": "Unnecessary logging in chipper smoke test",
+      "status": "Checked and Commented"
+    },
+    {
+      "id": "LOGGLY-10797",
+      "description": "Index from Past 36 hours to 7days are not getting logged",
+      "status": "Checked and Commented"
+    }
+  ]
+}
