@@ -1,0 +1,15 @@
+Greetings!!
+
+
+-- Working on Test design document for Generic API Jigsaw02
+	Status: Under Progress
+
+-- Create common fixture for Jigsaw02 testing
+	Status: Done
+
+-- Code for Generic api in smote test
+	Status: Done
+
+-- Working on Generic api for Histogram, Terms in smote test
+	Status: Under Progress
+
